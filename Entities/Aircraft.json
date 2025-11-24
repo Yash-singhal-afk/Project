@@ -1,0 +1,82 @@
+{
+  "name": "Aircraft",
+  "type": "object",
+  "properties": {
+    "make": {
+      "type": "string",
+      "description": "Aircraft manufacturer"
+    },
+    "model": {
+      "type": "string",
+      "description": "Aircraft model"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "single_engine",
+        "multi_engine",
+        "jet",
+        "turboprop",
+        "glider"
+      ],
+      "description": "Aircraft category"
+    },
+    "max_takeoff_weight": {
+      "type": "number",
+      "description": "Maximum takeoff weight in pounds"
+    },
+    "empty_weight": {
+      "type": "number",
+      "description": "Empty weight in pounds"
+    },
+    "max_speed": {
+      "type": "number",
+      "description": "Maximum speed in knots"
+    },
+    "cruise_speed": {
+      "type": "number",
+      "description": "Cruise speed in knots"
+    },
+    "stall_speed": {
+      "type": "number",
+      "description": "Stall speed in knots"
+    },
+    "rate_of_climb": {
+      "type": "number",
+      "description": "Rate of climb in feet per minute"
+    },
+    "service_ceiling": {
+      "type": "number",
+      "description": "Service ceiling in feet"
+    },
+    "fuel_capacity": {
+      "type": "number",
+      "description": "Fuel capacity in gallons"
+    },
+    "fuel_burn_rate": {
+      "type": "number",
+      "description": "Fuel burn rate in gallons per hour"
+    },
+    "takeoff_distance": {
+      "type": "number",
+      "description": "Ground roll distance in feet at sea level"
+    },
+    "landing_distance": {
+      "type": "number",
+      "description": "Landing roll distance in feet at sea level"
+    },
+    "wing_area": {
+      "type": "number",
+      "description": "Wing area in square feet"
+    },
+    "horsepower": {
+      "type": "number",
+      "description": "Engine horsepower"
+    }
+  },
+  "required": [
+    "make",
+    "model",
+    "category"
+  ]
+}

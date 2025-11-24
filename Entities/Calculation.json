@@ -1,0 +1,78 @@
+{
+  "name": "Calculation",
+  "type": "object",
+  "properties": {
+    "aircraft_id": {
+      "type": "string",
+      "description": "Reference to aircraft"
+    },
+    "aircraft_name": {
+      "type": "string",
+      "description": "Aircraft make and model"
+    },
+    "scenario_name": {
+      "type": "string",
+      "description": "Name for this calculation scenario"
+    },
+    "altitude": {
+      "type": "number",
+      "description": "Pressure altitude in feet"
+    },
+    "temperature": {
+      "type": "number",
+      "description": "Temperature in Celsius"
+    },
+    "weight": {
+      "type": "number",
+      "description": "Aircraft weight in pounds"
+    },
+    "headwind": {
+      "type": "number",
+      "description": "Headwind component in knots"
+    },
+    "runway_condition": {
+      "type": "string",
+      "enum": [
+        "dry",
+        "wet",
+        "icy"
+      ],
+      "description": "Runway surface condition"
+    },
+    "results": {
+      "type": "object",
+      "description": "Calculated performance results",
+      "properties": {
+        "density_altitude": {
+          "type": "number"
+        },
+        "takeoff_distance": {
+          "type": "number"
+        },
+        "landing_distance": {
+          "type": "number"
+        },
+        "rate_of_climb": {
+          "type": "number"
+        },
+        "true_airspeed": {
+          "type": "number"
+        },
+        "fuel_efficiency": {
+          "type": "number"
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    }
+  },
+  "required": [
+    "aircraft_id",
+    "aircraft_name",
+    "altitude",
+    "temperature",
+    "weight"
+  ]
+}
